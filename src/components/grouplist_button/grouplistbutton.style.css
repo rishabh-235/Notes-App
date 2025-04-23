@@ -1,0 +1,41 @@
+.grouplist-button{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    border-radius: 0.9rem;
+    text-decoration: none;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    background-color: #ffffff;
+}
+
+.grouplist-button:hover{
+    background-color:rgba(47, 47, 47, 17%);
+    transition: background-color 0.1s ease-in-out;
+}
+
+.grouplist-button:active{
+    background-color:rgba(47, 47, 47, 25%);
+    transition: background-color 0.1s ease-in-out;
+}
+
+.grouplist-button div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4.5% 4.05%;
+    border-radius: 100%;
+    background-color: #0047FF;
+    color: #ffffff;
+}
+
+.grouplist-button p{
+    margin: 0;
+    font-size: 1.06rem;
+    font-weight: 500;
+    color: #000000;
+    flex-basis: 76%;
+    text-align: start;
+}

@@ -1,0 +1,41 @@
+.group-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-basis: 25%;
+  border-right: 1px solid #ccc;
+}
+
+.group-list-container h1{
+    font-size: 33px;
+    font-weight: 500;
+    margin: 10px 0;
+    text-align: center;
+    position: relative;
+    top: 36px;
+}
+
+.group-list{
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  overflow-y: auto;
+  height: 100vh;
+  width: 25%;
+  scrollbar-width: thin;
+  scrollbar-color: #ffffff #ccc;
+  top: 8rem;
+}
+
+.add-group-button{
+    height: 55px;
+    width: 55px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    bottom: 2rem;
+    left: 19rem;
+    background-image: url('../../assets/AddButton.png');
+    background-size: cover;
+}
