@@ -1,0 +1,38 @@
+.notes-card-container{
+    background-color: #ffffff;
+    margin-top: 1rem;
+    padding: 1.6rem 2.2rem;
+    font-size: 0.9rem;
+    border-radius: 0.3rem;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.28);
+}
+
+.notes-card-container p{
+    margin: 0;
+    font-weight: 400;
+    letter-spacing: 0.05rem;
+    text-align: start;
+    line-height: 1.5rem;
+}
+
+.notes-card-container h5{
+    margin: 0;
+    font-weight: 600;
+    letter-spacing: 0.05rem;
+    text-align: end;
+    color: #353535;
+    font-wenight: 600;
+    margin-top: 0.3rem;
+}
+
+@media (max-width: 426px) {
+    .notes-card-container{
+        padding: 1rem 1.5rem;
+    }
+    .notes-card-container h5{
+        font-size: 0.7rem;
+    }
+    .notes-card-container p{
+        font-size: 0.7rem;
+    }
+}

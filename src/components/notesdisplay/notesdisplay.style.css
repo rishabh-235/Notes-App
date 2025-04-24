@@ -1,0 +1,154 @@
+.notes-display-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.8rem 2rem;
+  text-decoration: none;
+  font-size: 1rem;
+  border: none;
+  background-color: #001f8b;
+  color: #ffffff;
+  position: sticky;
+  top: 0;
+  gap: 1rem;
+  z-index: 1;
+}
+
+.material-symbols-outlined {
+  font-size: 1.2rem;
+  color: #ffffff;
+  cursor: pointer;
+  display: none;
+}
+
+.thumb-nail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.6rem;
+  width: 2.8rem;
+  border-radius: 100%;
+  background-color: #0047ff;
+}
+
+.notes-display-header p {
+  margin: 0;
+  font-size: 1.06rem;
+  font-weight: 400;
+  letter-spacing: 0.05rem;
+  flex-basis: 94%;
+  text-align: start;
+}
+
+.notes-display {
+  width: 75%;
+  height: 65vh;
+  position: fixed;
+  padding: 0.2rem 1.8rem 1.8rem 1.8rem;
+  overflow-y: scroll;
+}
+
+.notes-input {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 11rem;
+  padding: 0.9rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  border-bottom-left-radius: 0.7rem;
+  background-color: #001f8b;
+  color: #000000;
+  position: fixed;
+  bottom: 0;
+}
+
+.notes-input textarea {
+  width: 74.5%;
+  height: 100%;
+  font-size: 1.1rem;
+  border: none;
+  color: #000000;
+  resize: none;
+  border-radius: 0.5rem;
+  padding: 0.7rem 1.4rem;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.05rem;
+}
+
+.save-button {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  width: 2.5rem;
+  height: 1.9rem;
+  cursor: pointer;
+}
+
+@media (max-width: 1200px){
+  .notes-display{
+    height: 65vh;
+  }
+}
+
+@media (max-width: 426px) {
+  .notes-display-header {
+    padding: 0.8rem 1rem;
+  }
+
+  .notes-display-header a {
+    text-decoration: none;
+  }
+
+  .notes-display-header .material-symbols-outlined {
+    font-size: 1.2rem;
+    color: #ffffff;
+    cursor: pointer;
+    display: block;
+  }
+
+  .notes-display-header-left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: auto;
+    height: 100%;
+  }
+
+  .thumb-nail {
+    font-size: 0.8rem;
+    height: 2.2rem;
+    width: 2.2rem;
+  }
+
+  .notes-display-header p {
+    font-size: 0.8rem;
+  }
+
+  .notes-display {
+    width: 100%;
+    height: 72.5%;
+    top: 3.4rem;
+  }
+
+  .notes-input {
+    height: 7rem;
+    padding: 0.5rem 0.8rem;
+    border-radius: 0rem;
+  }
+
+  .notes-input textarea {
+    width: 100%;
+    height: 100%;
+    font-size: 0.9rem;
+    padding: 0.9rem 1.2rem;
+  }
+  .save-button {
+    width: 1.8rem;
+    height: 1.2rem;
+    right: 1.4rem;
+    bottom: 1.4rem;
+  }
+}

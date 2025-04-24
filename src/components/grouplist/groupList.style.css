@@ -1,41 +1,93 @@
 .group-list-container {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0.625rem;
   flex-basis: 25%;
-  border-right: 1px solid #ccc;
 }
 
-.group-list-container h1{
-    font-size: 33px;
-    font-weight: 500;
-    margin: 10px 0;
-    text-align: center;
-    position: relative;
-    top: 36px;
+.group-list-container h1 {
+  font-size: 2.0625rem;
+  font-weight: 500;
+  margin: 0.625rem 0;
+  text-align: center;
+  position: relative;
+  top: 2.25rem;
 }
 
-.group-list{
+.group-list {
   display: flex;
   flex-direction: column;
   position: fixed;
   overflow-y: auto;
-  height: 100vh;
+  height: 81.5vh;
   width: 25%;
   scrollbar-width: thin;
   scrollbar-color: #ffffff #ccc;
   top: 8rem;
 }
 
-.add-group-button{
-    height: 55px;
-    width: 55px;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    position: absolute;
-    bottom: 2rem;
-    left: 19rem;
-    background-image: url('../../assets/AddButton.png');
-    background-size: cover;
+.add-group-button {
+  height: 3.4375rem;
+  width: 3.4375rem;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: fixed;
+  bottom: 4vh;
+  left: 18.5vw;
+  background-image: url("../../assets/AddButton.png");
+  background-size: cover;
+}
+
+@media (max-width: 900px) {
+  .group-list-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .add-group-button {
+    height: 2.5rem;
+    width: 2.5rem;
+    bottom: 3vh;
+    left: 18vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .group-list-container h1 {
+    font-size: 1.1rem;
+  }
+
+  .add-group-button {
+    height: 2rem;
+    width: 2rem;
+    bottom: 2vh;
+    left: 17vw;
+  }
+}
+
+@media (max-width: 426px) {
+  .group-list-container {
+    height: 100vh;
+    flex-basis: 100%;
+    width: 100%;
+  }
+  .group-list-container h1 {
+    font-size: 1.8rem;
+    text-align: start;
+    padding-left: 2rem;
+    width: 100%;
+  }
+
+  .group-list {
+    height: 85vh;
+    width: 100%;
+    top: 6rem;
+  }
+
+  .add-group-button {
+    height: 3rem;
+    width: 3rem;
+    bottom: 3.5vh;
+    left: 80vw;
+  }
 }

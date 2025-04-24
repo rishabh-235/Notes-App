@@ -1,12 +1,13 @@
 import React from 'react'
 import "./grouplistbutton.style.css";
+import { Link } from 'react-router-dom';
 
 function GroupListButton() {
   return (
-    <button className='grouplist-button'>
-        <div>MN</div>
+    <Link to="/notes"  className='grouplist-button'>
+        <div>MY</div>
         <p>My Notes</p>
-    </button>
+    </Link>
   )
 }
 

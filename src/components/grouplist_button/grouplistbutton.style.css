@@ -1,41 +1,90 @@
-.grouplist-button{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 2rem;
-    border-radius: 0.9rem;
-    text-decoration: none;
+.grouplist-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem 2rem;
+  border-radius: 0.9rem;
+  text-decoration: none;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  background-color: #ffffff;
+}
+
+.grouplist-button:hover {
+  background-color: rgba(47, 47, 47, 17%);
+  transition: background-color 0.1s ease-in-out;
+}
+
+.grouplist-button:active {
+  background-color: rgba(47, 47, 47, 25%);
+  transition: background-color 0.1s ease-in-out;
+}
+
+.grouplist-button div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.2rem;
+  width: 3rem;
+  border-radius: 100%;
+  background-color: #0047ff;
+  color: #ffffff;
+}
+
+.grouplist-button p {
+  margin: 0;
+  font-size: 1.06rem;
+  font-weight: 500;
+  color: #000000;
+  flex-basis: 76%;
+  text-align: start;
+}
+
+@media (max-width: 900px) {
+  .grouplist-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .grouplist-button div {
+    padding: 0.5rem 0.4rem;
+  }
+
+  .grouplist-button p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .grouplist-button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  .grouplist-button div {
+    padding: 0.4rem 0.3rem;
+  }
+
+  .grouplist-button p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 426px){
+  .grouplist-button {
+    padding: 0.7rem 2rem;
+    font-size: 0.7rem;
+  }
+
+  .grouplist-button div {
+    padding: 1rem 0.9rem;
+    font-size: 0.8rem;
+  }
+
+  .grouplist-button p {
     font-size: 1rem;
-    cursor: pointer;
-    border: none;
-    background-color: #ffffff;
-}
-
-.grouplist-button:hover{
-    background-color:rgba(47, 47, 47, 17%);
-    transition: background-color 0.1s ease-in-out;
-}
-
-.grouplist-button:active{
-    background-color:rgba(47, 47, 47, 25%);
-    transition: background-color 0.1s ease-in-out;
-}
-
-.grouplist-button div{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 4.5% 4.05%;
-    border-radius: 100%;
-    background-color: #0047FF;
-    color: #ffffff;
-}
-
-.grouplist-button p{
-    margin: 0;
-    font-size: 1.06rem;
-    font-weight: 500;
-    color: #000000;
-    flex-basis: 76%;
-    text-align: start;
+    flex-basis: 85%;
+  }
 }
