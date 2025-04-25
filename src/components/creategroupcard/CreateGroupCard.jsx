@@ -39,7 +39,11 @@ function CreateGroupCard() {
       alert("Please select a color.");
       return;
     }
-    if(state.groups.some((group) => group?.name?.toLowerCase() === groupName.toLowerCase())) {
+    if (
+      state.groups.some(
+        (group) => group?.name?.toLowerCase() === groupName.toLowerCase()
+      )
+    ) {
       alert("Group name already exists. Please choose a different name.");
       return;
     }
@@ -86,12 +90,14 @@ function CreateGroupCard() {
         <div className="create-group-color-input">
           <p htmlFor="group-colour">Choose Colour</p>
           <div className="color-picker-container">
-            <input
-              type="radio"
-              onClick={handleSelectColor}
-              name="group-colour"
-              className="purple"
-            />
+            <div>
+              <input
+                type="radio"
+                onClick={handleSelectColor}
+                name="group-colour"
+                className="purple"
+              />
+            </div>
             <input
               type="radio"
               onClick={handleSelectColor}

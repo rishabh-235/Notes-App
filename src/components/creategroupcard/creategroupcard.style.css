@@ -162,6 +162,7 @@
     font-size: 1rem;
     padding: 0.4rem 0.8rem;
     border: 1.2px solid #cccccc;
+    flex-basis: 60%;
   }
 
   .create-group-name-input input:placeholder-shown {
@@ -173,9 +174,13 @@
     gap: 0.3rem;
   }
 
-  .create-group-color-input button {
-    width: 1.2rem;
-    height: 1.2rem;
+  .color-picker-container {
+    gap: 0.4rem;
+  }
+
+  .color-picker-container input {
+    width: 1.3rem;
+    height: 1.3rem;
   }
 
   .group-create-button-container {
