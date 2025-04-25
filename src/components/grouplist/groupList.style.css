@@ -20,11 +20,12 @@
   flex-direction: column;
   position: fixed;
   overflow-y: auto;
-  height: 81.5vh;
+  height: 100vh;
   width: 25%;
   scrollbar-width: thin;
   scrollbar-color: #ffffff #ccc;
   top: 7rem;
+  padding-bottom: 15rem;
 }
 
 .add-group-button {

@@ -44,20 +44,6 @@ Deployed on **Vercel**
 
 ---
 
-## 📸 Screenshots
-
-_Add screenshots if you have any_
-
----
-
-## 📌 Future Improvements
-
-- Dark mode  
-- Note search feature  
-- Edit/delete notes and groups
-
----
-
 ## 📄 License
 
 This project is open-source and free to use.
