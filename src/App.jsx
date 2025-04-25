@@ -27,7 +27,7 @@ function App() {
               <Route index element={<LandingPage />} />
               <Route
                 path="/notes"
-                element={selectedGroup ? <NotesDisplay /> : <Navigate to="/" />}
+                element={<NotesDisplay />}
               />
             </Route>
           )}
