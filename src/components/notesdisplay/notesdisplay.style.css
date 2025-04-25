@@ -26,10 +26,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 2.6rem;
+  height: 2.7rem;
   width: 2.8rem;
   border-radius: 100%;
-  background-color: #0047ff;
 }
 
 .notes-display-header p {
@@ -75,6 +74,11 @@
   padding: 0.7rem 1.4rem;
   font-family: "Roboto", sans-serif;
   letter-spacing: 0.05rem;
+
+}
+
+.notes-input textarea:focus {
+  outline: none;
 }
 
 .save-button {

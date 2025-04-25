@@ -1,20 +1,15 @@
 import React from "react";
 import "./notescard.style.css";
 
-function NotesCard() {
+function NotesCard({note}) {
   return (
     <div className="notes-card-container">
       <p>
-        Another productive way to use this tool to begin a daily writing
-        routine. One way is to generate a random paragraph with the intention to
-        try to rewrite it while still keeping the original meaning. The purpose
-        here is to just get the writing started so that when the writer goes
-        onto their day's writing projects, words are already flowing from their
-        fingers.
+        {note.text}
       </p>
 
       <h5>
-        9 Mar 2023 &nbsp; &nbsp;
+        {note.date} &nbsp; &nbsp;
         <svg
           width="8"
           height="8"
@@ -24,7 +19,7 @@ function NotesCard() {
         >
           <circle cx="4" cy="4" r="4" fill="#353535" />
         </svg>
-        &nbsp; &nbsp;10:10 AM
+        &nbsp; &nbsp;{note.time}
       </h5>
     </div>
   );

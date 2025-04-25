@@ -1,6 +1,7 @@
 .note-editor-container {
     flex-basis: 75%;
     background-color: #DAE5F5;
+    height: 100vh;
 }
 
 @media (max-width: 426px) {

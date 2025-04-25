@@ -27,9 +27,8 @@
   align-items: center;
   justify-content: center;
   height: 3.2rem;
-  width: 3rem;
+  width: 3.2rem;
   border-radius: 100%;
-  background-color: #0047ff;
   color: #ffffff;
 }
 
@@ -38,7 +37,7 @@
   font-size: 1.06rem;
   font-weight: 500;
   color: #000000;
-  flex-basis: 76%;
+  flex-basis: 80%;
   text-align: start;
 }
 
@@ -85,6 +84,6 @@
 
   .grouplist-button p {
     font-size: 1rem;
-    flex-basis: 85%;
+    flex-basis: 90%;
   }
 }

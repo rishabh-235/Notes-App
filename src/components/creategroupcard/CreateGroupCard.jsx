@@ -1,9 +1,75 @@
-import React from "react";
+import React, { useState, useContext, useEffect } from "react";
 import "./creategroupcard.style.css";
+import { NotesContext } from "../../contextAPI/NotesProvider";
 
 function CreateGroupCard() {
+  const { state, dispatch } = useContext(NotesContext);
+  const [color, setColor] = useState();
+
+  useEffect(() => {
+    const createGroupCard = document.querySelector(
+      ".create-group-card-container"
+    );
+    if (state.isCreating) {
+      createGroupCard.style.display = "flex";
+    } else {
+      createGroupCard.style.display = "none";
+    }
+  }, [state.isCreating]);
+
+  const handleCloseCreateGroup = (e) => {
+    if (e.target.id === "outer-container") {
+      setColor(null);
+      document.getElementById("group-name").value = "";
+      dispatch({ type: "TOGGLE_CREATING" });
+    }
+  };
+
+  const handleSelectColor = (e) => {
+    setColor(e.target.className);
+  };
+
+  const handleCreateGroup = () => {
+    const groupName = document.getElementById("group-name").value;
+    if (groupName === "") {
+      alert("Please enter a group name.");
+      return;
+    }
+    if (!color) {
+      alert("Please select a color.");
+      return;
+    }
+    if(state.groups.some((group) => group?.name?.toLowerCase() === groupName.toLowerCase())) {
+      alert("Group name already exists. Please choose a different name.");
+      return;
+    }
+
+    const nameAfterSpace = groupName.split(" ")[1];
+
+    const thumbnailName =
+      groupName.charAt(0).toUpperCase() +
+      (nameAfterSpace ? nameAfterSpace.charAt(0).toUpperCase() : "");
+
+    const newGroup = {
+      id: Date.now(),
+      name: groupName,
+      color: color,
+      thumbnailName: thumbnailName,
+      notes: [],
+    };
+
+    dispatch({ type: "ADD_GROUP", payload: newGroup });
+    dispatch({ type: "TOGGLE_CREATING" });
+    document.getElementById("group-name").value = "";
+    setColor(null);
+  };
+
   return (
-    <div className="create-group-card-container">
+    <div
+      className="create-group-card-container"
+      id="outer-container"
+      onClick={handleCloseCreateGroup}
+    >
       <div className="create-group-card">
         <h3>Create New Group</h3>
 
@@ -20,35 +86,49 @@ function CreateGroupCard() {
         <div className="create-group-color-input">
           <p htmlFor="group-colour">Choose Colour</p>
           <div className="color-picker-container">
-            <button
+            <input
+              type="radio"
+              onClick={handleSelectColor}
               name="group-colour"
               className="purple"
-            ></button>
-            <button
+            />
+            <input
+              type="radio"
+              onClick={handleSelectColor}
               name="group-colour"
               className="pink"
-            ></button>
-            <button
+            />
+            <input
+              type="radio"
+              onClick={handleSelectColor}
               name="group-colour"
               className="cyan"
-            ></button>
-            <button
+            />
+            <input
+              type="radio"
+              onClick={handleSelectColor}
               name="group-colour"
               className="orange"
-            ></button>
-            <button
+            />
+            <input
+              type="radio"
+              onClick={handleSelectColor}
               name="group-colour"
               className="blue"
-            ></button>
-            <button
+            />
+            <input
+              type="radio"
+              onClick={handleSelectColor}
               name="group-colour"
               className="skyblue"
-            ></button>
+            />
           </div>
         </div>
 
         <div className="group-create-button-container">
-          <button className="group-create-button">Create</button>
+          <button onClick={handleCreateGroup} className="group-create-button">
+            Create
+          </button>
         </div>
       </div>
     </div>
